@@ -1,4 +1,5 @@
 import json
+import os
 #Create, parte onde o usuário insere os dados
 nome = input("insira um nome para cadastro: ");
 idade = int(input("insira idade: "));
@@ -11,6 +12,7 @@ user = {
 }
 
 print(json.dumps(user, indent=4, ensure_ascii=False));
+
 
 #print(nome,idade,email,sep="\n");
 
