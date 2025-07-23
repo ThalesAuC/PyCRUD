@@ -12,3 +12,5 @@ função de atualizar esse campo preenchido ou completamente um cadastro
 
 #D - DELETE
 função de remover completamente todos os cadastros ou apenas um seguindo a regra de não permitir manter um cadastro com informações faltantes
+
+
