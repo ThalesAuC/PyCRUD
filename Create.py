@@ -1,17 +1,20 @@
 import json
 import os
 #Create, parte onde o usuário insere os dados
-nome = input("insira um nome para cadastro: ");
-idade = int(input("insira idade: "));
-email = input("insira o e-mail: ");
+userid # ler a ultima id e aplicar a logica de +1 encima do ultimo cadastrado
+cpf = input("Insira o CPF: ")
+nome = input("insira um nome: ")
+idade = int(input("insira idade: "))
+email = input("insira o e-mail: ")
 
-user = {
+
+user = { #objeto usuário
+  "id":userid,
+  "cpf":cpf,
   "nome":nome,
-  "idade":idade,
   "email":email,
-}
-
-print(json.dumps(user, indent=4, ensure_ascii=False));
+    }
+print(json.dumps(user, indent=4, ensure_ascii=False))
 
 
 #print(nome,idade,email,sep="\n");
