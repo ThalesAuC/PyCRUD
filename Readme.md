@@ -8,8 +8,8 @@
 # Sistema C.R.U.D. para teste de conceito:
  - criado em Python, implementado mongoDB para o banco de dados, implementação em docker para deploy rapido.
 
- 1- Para rodar o programa use ´git clone https://github.com/ThalesAuC/PyCRUD´ </br>
- 2- depois para iniciar o banco de dados use: ´docker-compose up -d mongodb´ </br>
- 3- e por fim use ´docker-compose up --build smartficha_0.1´  </br>
+ 1- Para rodar o programa use `git clone https://github.com/ThalesAuC/PyCRUD` </br>
+ 2- depois para iniciar o banco de dados use: `docker-compose up -d mongodb` </br>
+ 3- e por fim use `docker-compose up --build smartficha_0.1`  </br>
 
 ![Imagem do Programa rodando em linha de comando pelo windows terminal](mainscreen.png) 
