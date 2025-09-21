@@ -14,7 +14,7 @@ services:
 
   app:
     build: .
-    container_name: app_python
+    container_name: smartficha_0.1
     depends_on:
       - mongodb
     environment:
