@@ -1,34 +1,56 @@
 import os
-import json
 import pyfiglet
 from rich.console import Console
 from rich.panel import Panel
-f = pyfiglet.figlet_format("PyCrud", font="slant")
-print(f)
+from rich.table import Table
+from FuncList import pausa, criar_cadastro, lista_cadastro, atualizar_cadastro, deletar_cadastro
 console = Console()
-console.print(Panel("1- Novo Cadastro"))
-console.print(Panel("2- Buscar Cadastro"))
-response = input(int())
+header = pyfiglet.figlet_format("SmartFicha 0.1", font="slant")
 
-match response:
-    case 1: #cadastrar novo usuário
-    userid # ler a ultima id e aplicar a logica de +1 encima do ultimo cadastrado
-    cpf = input("Insira o CPF: ")
-    nome = input("insira um nome: ")
-    idade = int(input("insira idade: "))
-    email = input("insira o e-mail: ")
+def head():
+    print(header)
 
+def menu():
+    console.print("Sistema para Cadastro de Pacientes, Selecione uma opção para prosseguir: ")
+    console.print("[1] Novo Cadastro")
+    console.print("[2] Listar Cadastros")
+    console.print("[3] Alterar Cadastros") 
+    console.print("[4] Remover Cadastro")
+    console.print("[0] SAIR", style="red")
 
-    user = { #objeto usuário
-        "id":userid,
-        "cpf":cpf,
-        "nome":nome,
-        "email":email,
-    }
-    print(json.dumps(user, indent=4, ensure_ascii=False))
-    
-    Case 2: #Buscar usuário já cadastrado para Deletar ou Atualizar
-    f = pyfiglet.figlet_format("Buscar Cadastro", font="slant")
-    print(f)
-    console = Console()
-    console.print(Panel("Insira uma informação para buscar o cadastro (ID,CPF ou Nome)"))
+    escolha = int(input("Escolha uma Opção: "))
+    return escolha
+
+def clearterm():
+    os.system('cls' if os.name == 'nt' else 'clear')
+   
+if __name__ =="__main__":
+    while True:
+        clearterm()
+        head()
+        escolha = menu()
+
+        match escolha:
+            case 0:
+                console.print("Fechando Sistema...")
+                clearterm()
+                exit()
+            
+            case 1:
+                criar_cadastro()
+                clearterm()
+            
+            case 2:
+                lista_cadastro()
+            
+            case 3:
+                atualizar_cadastro()
+                clearterm
+            
+            case 4:
+                deletar_cadastro()
+            
+            case _:
+                console.print("ERRO: NENHUMA OPÇÃO CORRESPONDENTE")
+                pausa()
+                clearterm()

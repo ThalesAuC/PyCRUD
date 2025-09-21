@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: mongo_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: senha123
+
+  app:
+    build: .
+    container_name: app_python
+    depends_on:
+      - mongodb
+    environment:
+      MONGO_URI: "mongodb://admin:senha123@mongodb:27017"
+    stdin_open: true
+    tty: true
+
+volumes:
+  mongo_data:
