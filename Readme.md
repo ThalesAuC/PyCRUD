@@ -12,7 +12,7 @@
  2- Com o docker instalado abra a pasta pycrud
  3- Depois para iniciar o banco de dados use: `docker-compose up -d mongodb` </br>
  4- Depois rode: `docker-compose up -d --build smartficha`  </br>
- 5- Para abrir o terminal do container rode: `docker exec -it smartficha_0.1 bash` ou `docker exec -it smartficha_0.1 sh`
- 6- Por fim use o comando para inciar o sistema `python main.py`
+ 5- Para abrir o terminal do container rode: `docker exec -it smartficha_0.1 bash` ou `docker exec -it smartficha_0.1 sh` </br>
+ 6- Por fim use o comando para inciar o sistema `python main.py` </br>
 
 ![Imagem do Programa rodando em linha de comando pelo windows terminal](mainscreen.png) 
