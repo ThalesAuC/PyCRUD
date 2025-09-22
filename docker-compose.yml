@@ -10,8 +10,8 @@ services:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: senha123
 
-  app:
-    build: smartficha
+  smartficha:
+    build: .
     container_name: smartficha_0.1
     depends_on:
       - mongodb
