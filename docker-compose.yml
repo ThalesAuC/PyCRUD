@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   mongodb:
     image: mongo:7.0
@@ -13,7 +11,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: senha123
 
   app:
-    build: .
+    build: smartficha
     container_name: smartficha_0.1
     depends_on:
       - mongodb
