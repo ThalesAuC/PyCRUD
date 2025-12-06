@@ -48,6 +48,7 @@ def lista_cadastro():
     pacientes = listar_pacientes()
     if not pacientes:
         console.print("❌ NENHUM PACIENTE CADASTRADO!", style="red")
+        pausa()
         return 0
     else:
         tabela_list("Pacientes", pacientes)
@@ -57,13 +58,13 @@ def localizar_cadastro():
     cpf = input("Digite o CPF do Cadastro a ser localizado: ")
     paciente = encontrar_paciente(cpf)
     if not paciente:
-        console.print("❌ NENHUM CADASTRO LOCALIZADO", style="red")
+        console.print("❌ CADASTRO NÃO LOCALIZADO", style="red")
         pausa()
         return 0
     else:
         cadastro_unico("Cadastro Localizado", paciente)
     pausa()
-
+#todo: utilizar função para validar se cadastro existe e implementar função em localizar cadastro e em atualizar cadastro para que não haja problemas
 def atualizar_cadastro():
     console.print("Insira as Informações para Atualizar ")
     cpf = input("CPF: ")
